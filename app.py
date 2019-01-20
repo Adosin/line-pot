@@ -39,10 +39,14 @@ def handle_message(event):
     msg = event.message.text  # 使用者傳來
     r = '很抱歉, 你說甚麼!'  # 機器人回傳
 
-    if msg == "hi":
-        r == 'hi!'
-    elif msg == '你吃飯了嗎？':
+    if msg in ['hi', 'hi!', 'Hi', 'Hi!']:
+        r == '海!'
+    elif msg in ['你吃飯了嗎', '你吃飯了嗎?']:
         r = '還沒'
+    elif msg == '你是誰':
+        r = '我是機器人'
+    elif '訂位' in msg:
+        r = '你想訂位, 是嗎?'
 
 
     line_bot_api.reply_message(
