@@ -52,7 +52,7 @@ def handle_message(event):
         return # 結束程式, 以下不執行
 
     if msg in ['hi', 'hi!', 'Hi', 'Hi!']:
-        r == '海!'
+        r = '海!'
     elif msg in ['你吃飯了嗎', '你吃飯了嗎?']:
         r = '還沒'
     elif msg == '你是誰':
